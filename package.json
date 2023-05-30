@@ -45,6 +45,7 @@
     "dependencies": {
         "@fontsource-variable/inter": "^5.0.1",
         "mongoose": "^7.2.2",
-        "normalize.css": "^8.0.1"
+        "normalize.css": "^8.0.1",
+        "zod": "^3.21.4"
     }
 }
