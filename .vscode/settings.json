@@ -5,4 +5,6 @@
     /* use prettier to format code on save */
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
+    /* tailwind */
+    "css.lint.unknownAtRules": "ignore"
 }
