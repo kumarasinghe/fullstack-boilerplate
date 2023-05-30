@@ -1,0 +1,27 @@
+/* fonts */
+@import "@fontsource-variable/inter/index.css";
+
+/* variables */
+:root {
+    --color-highlight: #fff3;
+
+    --color-accent: #007aff;
+    --color-accent-50: #006fe6;
+    --color-accent-foreground: #fff;
+
+    --color-base: #fff;
+    --color-base-50: #f9fafb;
+    --color-base-100: #f3f4f6;
+    --color-base-200: #e5e7eb;
+    --color-base-300: #d1d5db;
+    --color-base-400: #9ca3af;
+    --color-base-500: #6b7280;
+    --color-base-600: #4b5563;
+    --color-base-700: #374151;
+    --color-base-800: #1f2937;
+    --color-base-900: #111827;
+    --color-base-950: #030712;
+    --color-base-foreground: #444;
+
+    --font-family-default: "Inter Variable", Helvetica, Arial, sans-serif;
+}
