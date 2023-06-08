@@ -7,12 +7,16 @@
  * - npm run build
  */
 
+import DBClient from "~/libs/db-client";
 import {
     renderToStream,
     type RenderToStreamOptions,
 } from "@builder.io/qwik/server";
 import { manifest } from "@qwik-client-manifest";
 import Root from "./root";
+
+// connect to the database
+DBClient.connect();
 
 export default function (opts: RenderToStreamOptions) {
     return renderToStream(<Root />, {
