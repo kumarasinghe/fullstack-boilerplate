@@ -1,3 +1,4 @@
+import type { QRL } from "@builder.io/qwik";
 import { component$, useStore, $ } from "@builder.io/qwik";
 import type { ValidationStore } from "~/libs/ui/form/form";
 import Form from "~/libs/ui/form/form";
@@ -7,22 +8,24 @@ import { EmailValidator } from "~/utils/validators";
 import { Link } from "@builder.io/qwik-city";
 import ErrorLabel from "~/components/error-label";
 
-export default component$(() => {
+type SignUpFormProps = {
+    onSubmit$: QRL<(data: Record<string, unknown>) => void>;
+};
+
+export default component$((props: SignUpFormProps) => {
+    const { onSubmit$ } = props;
+
     const validationStore = useStore<ValidationStore>({
         email: {
             validator: EmailValidator,
         },
     });
 
-    const handleSubmit = $(async (formData: any) => {
-        console.log({ formData });
-    });
-
     return (
         <Form
             class="flex w-80 flex-col gap-3 rounded bg-base px-8 py-10 shadow"
             validationStore={validationStore}
-            onSubmit$={handleSubmit}
+            onSubmit$={onSubmit$}
         >
             {/* form title */}
             <h2 class="mb-2 text-center text-xl">Sign In</h2>
