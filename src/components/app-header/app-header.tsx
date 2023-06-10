@@ -7,7 +7,12 @@ export default component$(() => {
     return (
         <header class="flex h-14 items-center px-5">
             {/* text logo */}
-            <Link class="cursor-pointer font-medium text-accent">MyApp</Link>
+            <Link
+                href="/"
+                class="cursor-pointer font-medium text-accent"
+            >
+                MyApp
+            </Link>
             {/* navigation menu */}
             <nav class="ml-auto flex h-full items-center">
                 {appHeaderConfig.navItems.map((navItem) => {
